@@ -3,7 +3,7 @@ const sel = require('./selectors').loginEmail;
 
 describe('General', function () {
 
-    it('Verify receive an email', function(){
+    it('Verify gmail login', function(){
 
         browser.url('https://mail.google.com');
         $(sel.headingText).waitForVisible(1000);
