@@ -10,10 +10,10 @@ describe('General', function () {
         $(sel.email).setValue("modern.token.2019@gmail.com");
         $(sel.next).click();
         $(sel.passwordNext).waitForVisible(3000);
+        $(sel.inputPass).waitForVisible(3000);
         $(sel.inputPass).setValue(['M','o','d','e','r','n','T','o','k','e','n']);
         $(sel.passwordNext).click();
-        //browser.pause(5000);
-        $(sel.inbox).waitForVisible(5000);
+        $(sel.loading).waitForExist();
         console.log(browser.getTitle());
 
 
