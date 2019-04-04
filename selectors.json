@@ -2,7 +2,7 @@
 
   "loginEmail": {
     "headingText": "#headingText",
-    "email": "#identifierId",
+    "inputemail": "#identifierId",
     "next": ".CwaK9",
     "inputPass": "input.whsOnd.zHQkBf",
     "loading": "#loading",

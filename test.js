@@ -1,17 +1,18 @@
 const { assert } = require('chai');
 const sel = require('./selectors').loginEmail;
+const val = require('./value').loginEmail;
 
 describe('General', function () {
 
     it('Verify gmail login', function(){
 
-        browser.url('https://mail.google.com');
+        browser.url(val.google);
         $(sel.headingText).waitForVisible(1000);
-        $(sel.email).setValue("modern.token.2019@gmail.com");
+        $(sel.inputemail).setValue(val.email);
         $(sel.next).click();
         $(sel.passwordNext).waitForVisible(3000);
         $(sel.inputPass).waitForVisible(3000);
-        $(sel.inputPass).setValue(['M','o','d','e','r','n','T','o','k','e','n']);
+        $(sel.inputPass).setValue(val.password);
         $(sel.passwordNext).click();
         $(sel.loading).waitForExist();
         $(sel.loading).waitForVisible(undefined, true);
