@@ -14,10 +14,11 @@ describe('General', function () {
         $(sel.inputPass).setValue(['M','o','d','e','r','n','T','o','k','e','n']);
         $(sel.passwordNext).click();
         $(sel.loading).waitForExist();
-        console.log(browser.getTitle());
+        $(sel.loading).waitForVisible(undefined, true);
+        const is_expected_email = $(`a[aria-label*="modern.token.2019@gmail.com"]`).isExisting();
 
 
-         assert.equal(true, true);
+         assert.equal(is_expected_email, true);
     });
 
 
